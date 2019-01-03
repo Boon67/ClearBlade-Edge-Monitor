@@ -1,0 +1,68 @@
+{
+    "Description": "Role for reading information from Edges. Used with the Edge monitoring Portal",
+    "ID": "c2d9e1c10b9ec2c8d4b2a3e5a758",
+    "Name": "edgeInfo",
+    "Permissions": {
+        "AllCollections": {
+            "Level": 0
+        },
+        "AllServices": {
+            "Level": 0
+        },
+        "CodeServices": [],
+        "Collections": [
+            {
+                "Columns": [],
+                "ID": "8aa18bab0b868eef80c6b0e3e903",
+                "Items": [],
+                "Level": 1,
+                "Name": "firmware"
+            }
+        ],
+        "Deployments": {
+            "Level": 0
+        },
+        "DevicesList": {
+            "Level": 0
+        },
+        "EdgesList": {
+            "Level": 1
+        },
+        "MsgHistory": {
+            "Level": 1
+        },
+        "Portals": [
+            {
+                "Level": 5,
+                "Name": "Device Management Portal",
+                "SystemKey": "c8c4c0c10bb0f8a6a0eaeff0b08901"
+            },
+            {
+                "Level": 5,
+                "Name": "Edge Monitor Portal",
+                "SystemKey": "c8c4c0c10bb0f8a6a0eaeff0b08901"
+            }
+        ],
+        "Push": {
+            "Level": 0
+        },
+        "Roles": {
+            "Level": 0
+        },
+        "Timers": {
+            "Level": 0
+        },
+        "Topics": [
+            {
+                "Level": 3,
+                "Name": "#"
+            }
+        ],
+        "Triggers": {
+            "Level": 0
+        },
+        "UsersList": {
+            "Level": 0
+        }
+    }
+}
