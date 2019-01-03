@@ -1,0 +1,30 @@
+{
+    "asset_types": [
+        "Adapters",
+        "Devices",
+        "Edges",
+        "Portals",
+        "Roles",
+        "Users"
+    ],
+    "author": {
+        "email": "tboon@clearblade.com"
+    },
+    "clouds": [],
+    "description": "",
+    "domains": [],
+    "gateways": [],
+    "image_url": "https://i.imgur.com/GfISkhE.png",
+    "keywords": [
+        "clearblade",
+        "iot",
+        "platform"
+    ],
+    "license": "MIT",
+    "name": "ClearBlade-Edge-Monitor",
+    "private": false,
+    "prog_lang": [],
+    "protocols": [],
+    "things": [],
+    "version": "1.0.0"
+}
