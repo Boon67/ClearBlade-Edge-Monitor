@@ -16,6 +16,3 @@ Import into your ClearBlade system. A sample user account is created with the ed
 ## Usage
 
 The portal provides a page that can be used as a standalone page, or migrated into your existing solution based upon your neeeds.
-
-## API
-
