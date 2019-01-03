@@ -1,0 +1,43 @@
+{
+    "auth": true,
+    "deployments": [
+        {
+            "assets": [
+                {
+                    "asset_class": "adaptors",
+                    "asset_id": "",
+                    "deployment": "defaultDeployment",
+                    "member": "defaultDeployment_deployment_edge_group",
+                    "sync": true
+                }
+            ],
+            "description": "",
+            "edges": [
+                "edge1"
+            ],
+            "name": "defaultDeployment"
+        },
+        {
+            "assets": [
+                {
+                    "asset_class": "adaptors",
+                    "asset_id": "ttyd",
+                    "deployment": "ttyd",
+                    "member": "ttyd_deployment_edge_group",
+                    "sync": true
+                }
+            ],
+            "description": "TTY Daemon for Edge Management",
+            "edges": [
+                "debian"
+            ],
+            "name": "ttyd"
+        }
+    ],
+    "description": "",
+    "messaging_url": "platform.clearblade.com:1883",
+    "name": "ClearBlade Edge Monitor",
+    "platform_url": "https://presales.clearblade.com",
+    "system_key": "c8c4c0c10bb0f8a6a0eaeff0b08901",
+    "system_secret": ""
+}
