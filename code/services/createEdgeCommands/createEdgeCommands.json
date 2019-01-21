@@ -1,0 +1,15 @@
+{
+    "auto_restart": false,
+    "concurrency": 0,
+    "current_version": 1,
+    "dependencies": "log,clearblade",
+    "execution_timeout": 60,
+    "logging_enabled": "false",
+    "name": "createEdgeCommands",
+    "params": [
+        "{\"item\":{\"name\":\"myString\",\"command\":\"myString\",\"style\":\"myString\",\"seq\":0}}"
+    ],
+    "permissions": {},
+    "run_user": "",
+    "source": "createEdgeCommands.js"
+}

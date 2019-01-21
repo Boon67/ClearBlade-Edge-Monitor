@@ -1,0 +1,117 @@
+{
+    "app_id": "c8c4c0c10bb0f8a6a0eaeff0b08901",
+    "collection_id": "de82a9c30b80efc1f19086dba679",
+    "items": [
+        {
+            "command": "pwd",
+            "enabled": false,
+            "item_id": "0098b3a2-834e-4546-bfbe-63b9881659a9",
+            "name": "Present Working Directory",
+            "seq": 0,
+            "style": "btn btn-outline-success"
+        },
+        {
+            "command": "reboot",
+            "enabled": true,
+            "item_id": "08a19aa4-8f36-4e71-bb02-7adef96168aa",
+            "name": "Reboot",
+            "seq": 15,
+            "style": "btn btn-outline-danger"
+        },
+        {
+            "command": "dump services",
+            "enabled": false,
+            "item_id": "2fd71028-00b6-4963-8712-2be92622561d",
+            "name": "Dump Services",
+            "seq": 0,
+            "style": "btn btn-outline-warning"
+        },
+        {
+            "command": "systemctl restart clearblade.service",
+            "enabled": true,
+            "item_id": "3be47503-997d-4bd9-89f3-5646196f37cd",
+            "name": "Restart ClearBlade Service",
+            "seq": 10,
+            "style": "btn btn-outline-warning"
+        },
+        {
+            "command": "ls /usr/bin/clearblade/adapters -lag",
+            "enabled": false,
+            "item_id": "727cb805-c712-4520-981c-b0bc1547e301",
+            "name": "List Folder",
+            "seq": 0,
+            "style": "btn btn-outline-success"
+        },
+        {
+            "command": "df",
+            "enabled": true,
+            "item_id": "77b2e4d3-dba6-4fb9-b976-e68faab187e3",
+            "name": "Disk Filesystem",
+            "seq": 5,
+            "style": "btn btn-outline-success"
+        },
+        {
+            "command": "top -b -n1",
+            "enabled": true,
+            "item_id": "ce832c13-d1f1-4556-a2a5-1a4bae030df2",
+            "name": "Top",
+            "seq": 0,
+            "style": "btn btn-outline-success"
+        },
+        {
+            "command": "journalctl -n200",
+            "enabled": true,
+            "item_id": "d7fba72c-e595-45b6-8139-a8644cfbea41",
+            "name": "Journal",
+            "seq": 1,
+            "style": "btn btn-outline-success"
+        },
+        {
+            "command": "systemctl status",
+            "enabled": true,
+            "item_id": "fc2e17aa-46ba-4eac-bf09-b53c23d9d6cd",
+            "name": "Services List",
+            "seq": 2,
+            "style": "btn btn-outline-success"
+        }
+    ],
+    "name": "edgeCommands",
+    "permissions": {
+        "Administrator": 15,
+        "Anonymous": 0,
+        "Authenticated": 0,
+        "edgeInfo": 15
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "command",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "style",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "seq",
+            "ColumnType": "int",
+            "PK": false
+        },
+        {
+            "ColumnName": "enabled",
+            "ColumnType": "bool",
+            "PK": false
+        }
+    ]
+}

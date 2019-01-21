@@ -9,8 +9,21 @@
         "AllServices": {
             "Level": 0
         },
-        "CodeServices": [],
+        "CodeServices": [
+            {
+                "Level": 1,
+                "Name": "fetchEdgeCommands",
+                "SystemKey": "c8c4c0c10bb0f8a6a0eaeff0b08901"
+            }
+        ],
         "Collections": [
+            {
+                "Columns": [],
+                "ID": "de82a9c30b80efc1f19086dba679",
+                "Items": [],
+                "Level": 15,
+                "Name": "edgeCommands"
+            },
             {
                 "Columns": [],
                 "ID": "8aa18bab0b868eef80c6b0e3e903",

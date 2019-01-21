@@ -1,0 +1,23 @@
+{
+    "assets": [
+        {
+            "asset_class": "adaptors",
+            "asset_id": "edgeCommander",
+            "deployment": "defaultDeployment",
+            "member": "defaultDeployment_deployment_edge_group",
+            "sync": true
+        },
+        {
+            "asset_class": "devices",
+            "asset_id": "",
+            "deployment": "defaultDeployment",
+            "member": "defaultDeployment_deployment_edge_group",
+            "sync": true
+        }
+    ],
+    "description": "",
+    "edges": [
+        "___ALL_EDGES___"
+    ],
+    "name": "defaultDeployment"
+}

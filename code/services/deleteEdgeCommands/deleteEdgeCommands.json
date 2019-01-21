@@ -1,0 +1,15 @@
+{
+    "auto_restart": false,
+    "concurrency": 0,
+    "current_version": 1,
+    "dependencies": "log,clearblade",
+    "execution_timeout": 60,
+    "logging_enabled": "false",
+    "name": "deleteEdgeCommands",
+    "params": [
+        "{\"item_id\":\"real_item_id_here\"}"
+    ],
+    "permissions": {},
+    "run_user": "",
+    "source": "deleteEdgeCommands.js"
+}

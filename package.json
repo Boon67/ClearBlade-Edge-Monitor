@@ -1,6 +1,8 @@
 {
     "asset_types": [
         "Adapters",
+        "Code Services",
+        "Collections",
         "Devices",
         "Edges",
         "Portals",
@@ -14,7 +16,7 @@
     "description": "",
     "domains": [],
     "gateways": [],
-    "image_url": "https://i.imgur.com/GfISkhE.png",
+    "image_url": "https://i.imgur.com/E0NGcCz.jpg",
     "keywords": [
         "clearblade",
         "iot",

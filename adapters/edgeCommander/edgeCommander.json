@@ -1,0 +1,14 @@
+{
+    "architecture": "edge-linux-386",
+    "deploy_command": "./deploy.sh",
+    "description": "Edge Commander Adapter",
+    "logs_command": "journalctl -u edgecommander.clearblade.service -n50",
+    "name": "edgeCommander",
+    "os": "",
+    "protocol": "",
+    "start_command": "./start.sh",
+    "status_command": "./status.sh",
+    "stop_command": "./stop.sh",
+    "undeploy_command": "./undeploy.sh",
+    "version": 24
+}

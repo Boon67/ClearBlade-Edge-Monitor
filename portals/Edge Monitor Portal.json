@@ -10,8 +10,9 @@
         "currentBreakpointForFlyoutWidgets": "lg",
         "currentBreakpointForPanes": "lg",
         "currentBreakpointsForWidgets": {
-            "6c3cf8ca-caf1-4811-80a2-d0e9e099e933": "md",
+            "6c3cf8ca-caf1-4811-80a2-d0e9e099e933": "sm",
             "6de7574e-fb24-42a7-8122-bc3f13a62c2b": "sm",
+            "6f4487ec-5862-4e70-ba68-835e39d9e557": "xs",
             "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5": "lg",
             "b339aca5-7886-488a-ab3a-fbdd9e40a2d3": "xxs"
         },
@@ -24,21 +25,31 @@
             },
             "6e1d6035-4eb6-41d2-904d-6f24059be2ec": {
                 "id": "6e1d6035-4eb6-41d2-904d-6f24059be2ec",
-                "name": "edges",
+                "name": "edgeList",
                 "settings": {
                     "CALL_ON_LOAD": true,
                     "SUPPRESS_DATASOURCE_ERRORS": false,
-                    "refresh_interval": 60
+                    "refresh_interval": 20
                 },
                 "type": "CB_EDGE_LIST"
+            },
+            "7363eca8-849d-4a5c-8786-5bcb683091ad": {
+                "id": "7363eca8-849d-4a5c-8786-5bcb683091ad",
+                "name": "edgeCommandsList",
+                "settings": {
+                    "CALL_ON_LOAD": true,
+                    "SUPPRESS_DATASOURCE_ERRORS": false,
+                    "code_name": "fetchEdgeCommands",
+                    "payload": "{}",
+                    "refresh_interval": 0
+                },
+                "type": "CB_CODE_SERVICE"
             },
             "7d3f2fee-8eaa-46c9-9139-e04a72cb9caf": {
                 "id": "7d3f2fee-8eaa-46c9-9139-e04a72cb9caf",
                 "name": "edgeResponse",
                 "settings": {
-                    "CALL_ON_LOAD": false,
-                    "SUPPRESS_DATASOURCE_ERRORS": false,
-                    "TOPIC_NAME": "edge/response"
+                    "TOPIC_NAME": "edge/command/edge1/_platform"
                 },
                 "type": "CB_MESSAGE_TOPIC"
             },
@@ -46,9 +57,7 @@
                 "id": "7d88be43-4170-4dd2-a1ca-ae61643986dc",
                 "name": "edgeCommand",
                 "settings": {
-                    "CALL_ON_LOAD": false,
-                    "SUPPRESS_DATASOURCE_ERRORS": false,
-                    "TOPIC_NAME": "edge/command"
+                    "TOPIC_NAME": "system/command/_edge/edge1"
                 },
                 "type": "CB_MESSAGE_TOPIC"
             },
@@ -58,40 +67,14 @@
                 "settings": {
                     "CALL_ON_LOAD": false,
                     "EDGENAME": "vmEdge1",
-                    "EDGE_NAME": "edge1",
+                    "EDGE_NAME": "pizero",
                     "SUPPRESS_DATASOURCE_ERRORS": false,
                     "refresh_interval": 0
                 },
                 "type": "CB_EDGE_METRICS"
             }
         },
-        "externalScripts": [
-            {
-                "promise": {},
-                "shouldBlockAllWidgets": true,
-                "url": "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"
-            },
-            {
-                "promise": {},
-                "shouldBlockAllWidgets": false,
-                "url": "//use.fontawesome.com/releases/v5.0.7/js/all.js"
-            },
-            {
-                "promise": {},
-                "shouldBlockAllWidgets": false,
-                "url": "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.min.css"
-            },
-            {
-                "promise": {},
-                "shouldBlockAllWidgets": true,
-                "url": "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js"
-            },
-            {
-                "promise": {},
-                "shouldBlockAllWidgets": true,
-                "url": "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-            }
-        ],
+        "externalScripts": [],
         "flyoutWidgetLayout": {
             "lg": [],
             "md": [],
@@ -202,16 +185,6 @@
             ]
         },
         "pages": {
-            "6df0747c-c4df-414a-a1e7-a62396facb19": {
-                "children": [],
-                "defaultValue": "",
-                "href": "",
-                "id": "6df0747c-c4df-414a-a1e7-a62396facb19",
-                "isChild": false,
-                "isParam": false,
-                "name": "Edge Monitor",
-                "path": ""
-            },
             "Home": {
                 "children": [],
                 "defaultValue": "",
@@ -593,6 +566,97 @@
                 "xs": [],
                 "xxs": []
             },
+            "6f4487ec-5862-4e70-ba68-835e39d9e557": {
+                "lg": [
+                    {
+                        "h": 9,
+                        "i": "efacbe4c-5de7-41a8-b188-b40965976d90",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 9,
+                        "i": "c2696040-a979-475f-ac45-7466ee95187c",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 12,
+                        "x": 0,
+                        "y": 9
+                    }
+                ],
+                "md": [
+                    {
+                        "h": 12,
+                        "i": "efacbe4c-5de7-41a8-b188-b40965976d90",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 9,
+                        "i": "c2696040-a979-475f-ac45-7466ee95187c",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 10,
+                        "x": 0,
+                        "y": 12
+                    }
+                ],
+                "sm": [],
+                "xs": [
+                    {
+                        "h": 20,
+                        "i": "efacbe4c-5de7-41a8-b188-b40965976d90",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 17,
+                        "i": "c2696040-a979-475f-ac45-7466ee95187c",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 20
+                    }
+                ],
+                "xxs": [
+                    {
+                        "h": 12,
+                        "i": "efacbe4c-5de7-41a8-b188-b40965976d90",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 14,
+                        "i": "c2696040-a979-475f-ac45-7466ee95187c",
+                        "minH": 3,
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 0,
+                        "y": 12
+                    }
+                ]
+            },
             "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5": {
                 "lg": [
                     {
@@ -640,61 +704,14 @@
             }
         },
         "paneLayouts": {
-            "6df0747c-c4df-414a-a1e7-a62396facb19": {
-                "lg": [
-                    {
-                        "h": 2,
-                        "i": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                        "w": 12,
-                        "x": 0,
-                        "y": 0
-                    }
-                ],
-                "md": [
-                    {
-                        "h": 2,
-                        "i": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                        "w": 12,
-                        "x": 0,
-                        "y": 0
-                    }
-                ],
-                "sm": [
-                    {
-                        "h": 2,
-                        "i": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                        "w": 12,
-                        "x": 0,
-                        "y": 0
-                    }
-                ],
-                "xs": [
-                    {
-                        "h": 2,
-                        "i": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                        "w": 12,
-                        "x": 0,
-                        "y": 0
-                    }
-                ],
-                "xxs": [
-                    {
-                        "h": 2,
-                        "i": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                        "w": 12,
-                        "x": 0,
-                        "y": 0
-                    }
-                ]
-            },
             "Home": {
                 "lg": [
                     {
-                        "h": 6,
+                        "h": 2,
                         "i": "e505c95d-5f1d-4792-8235-3b10fe53a64d",
                         "moved": false,
                         "static": false,
-                        "w": 3,
+                        "w": 4,
                         "x": 0,
                         "y": 0
                     },
@@ -703,9 +720,18 @@
                         "i": "517340f2-9b78-47e1-974e-cd68772246b3",
                         "moved": false,
                         "static": false,
-                        "w": 9,
-                        "x": 3,
+                        "w": 8,
+                        "x": 4,
                         "y": 0
+                    },
+                    {
+                        "h": 4,
+                        "i": "38aecda0-4b04-4538-ae45-2a810707b300",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 0,
+                        "y": 2
                     }
                 ],
                 "md": [
@@ -725,6 +751,13 @@
                         "static": false,
                         "w": 7,
                         "x": 3,
+                        "y": 0
+                    },
+                    {
+                        "h": 2,
+                        "i": "38aecda0-4b04-4538-ae45-2a810707b300",
+                        "w": 12,
+                        "x": 0,
                         "y": 0
                     }
                 ],
@@ -746,6 +779,13 @@
                         "w": 4,
                         "x": 2,
                         "y": 0
+                    },
+                    {
+                        "h": 2,
+                        "i": "38aecda0-4b04-4538-ae45-2a810707b300",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
                     }
                 ],
                 "xs": [
@@ -765,6 +805,13 @@
                         "static": false,
                         "w": 3,
                         "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "h": 2,
+                        "i": "38aecda0-4b04-4538-ae45-2a810707b300",
+                        "w": 12,
+                        "x": 0,
                         "y": 0
                     }
                 ],
@@ -786,6 +833,13 @@
                         "w": 2,
                         "x": 0,
                         "y": 3
+                    },
+                    {
+                        "h": 2,
+                        "i": "38aecda0-4b04-4538-ae45-2a810707b300",
+                        "w": 12,
+                        "x": 0,
+                        "y": 0
                     }
                 ]
             }
@@ -812,6 +866,28 @@
                     "tabbed": false
                 },
                 "themeType": "primary"
+            },
+            "38aecda0-4b04-4538-ae45-2a810707b300": {
+                "customPaneId": "",
+                "header": {
+                    "hide": false,
+                    "title": "Actions"
+                },
+                "hiddenBreakpoints": {},
+                "hideBorders": false,
+                "id": "38aecda0-4b04-4538-ae45-2a810707b300",
+                "pageId": "Home",
+                "tabInfo": {
+                    "activeTab": "6f4487ec-5862-4e70-ba68-835e39d9e557",
+                    "tabIds": [
+                        "6f4487ec-5862-4e70-ba68-835e39d9e557"
+                    ],
+                    "tabTitles": {
+                        "6f4487ec-5862-4e70-ba68-835e39d9e557": "Double Click"
+                    },
+                    "tabbed": false
+                },
+                "themeType": "secondary"
             },
             "517340f2-9b78-47e1-974e-cd68772246b3": {
                 "customPaneId": "",
@@ -856,28 +932,6 @@
                     "tabbed": false
                 },
                 "themeType": "secondary"
-            },
-            "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d": {
-                "customPaneId": "",
-                "header": {
-                    "hide": false,
-                    "title": ""
-                },
-                "hiddenBreakpoints": {},
-                "hideBorders": false,
-                "id": "f470ae43-d1d8-4c94-b2c0-ad2c8403fc2d",
-                "pageId": "6df0747c-c4df-414a-a1e7-a62396facb19",
-                "tabInfo": {
-                    "activeTab": "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5",
-                    "tabIds": [
-                        "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5"
-                    ],
-                    "tabTitles": {
-                        "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5": "Double Click"
-                    },
-                    "tabbed": false
-                },
-                "themeType": "primary"
             }
         },
         "savedPortalExists": true,
@@ -1099,11 +1153,7 @@
         },
         "widgets": {
             "0833988e-198a-4ba5-967b-13ec198f6790": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "0833988e-198a-4ba5-967b-13ec198f6790",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1138,18 +1188,14 @@
                     "chartMarginRight": 0,
                     "chartMarginTop": 0,
                     "innerRadius": 30,
-                    "showLabel": true,
+                    "showLabel": false,
                     "showTooltip": true
                 },
                 "tab": "6c3cf8ca-caf1-4811-80a2-d0e9e099e933",
                 "type": "PIE_CHART_WIDGET_COMPONENT"
             },
             "0ae655ed-dcd1-4035-9291-3688792ec6c3": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "0ae655ed-dcd1-4035-9291-3688792ec6c3",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1225,11 +1271,7 @@
                 "type": "LINE_CHART_WIDGET_COMPONENT"
             },
             "32bcff11-6b01-470b-9f96-7b7205c9a4ad": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "32bcff11-6b01-470b-9f96-7b7205c9a4ad",
                 "props": {
                     "html": {
@@ -1252,40 +1294,8 @@
                 "tab": "6c3cf8ca-caf1-4811-80a2-d0e9e099e933",
                 "type": "HTML_WIDGET_COMPONENT"
             },
-            "38ca76e4-3c6e-4066-9e46-05f281627eda": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
-                "id": "38ca76e4-3c6e-4066-9e46-05f281627eda",
-                "props": {
-                    "html": {
-                        "dataType": "DYNAMIC_DATA_TYPE",
-                        "force_data": [
-                            "STATIC_DATA_TYPE",
-                            "DYNAMIC_DATA_TYPE"
-                        ],
-                        "id": "1e1d1557-bc4f-4923-9c3e-641909f6383e",
-                        "incoming_parser": {
-                            "isDebugOn": false,
-                            "value": {
-                                "CSS": "",
-                                "HTML": "\u003cdiv id=\"t1\"\u003e\n  \u003cdiv id=\"t2\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n",
-                                "JavaScript": "//JavaScript\nvar term = new Terminal();\nterm.open(document.getElementById('t2'));\nedgeid=datasources.selectedEdge.latestData().name\nterm.write('\\x1B[1;3;31m' + edgeid + '\\x1B[0m $ ')"
-                            }
-                        }
-                    }
-                },
-                "tab": "7ab3a7f7-ccea-429c-95ce-dfd39e9bb2f5",
-                "type": "HTML_WIDGET_COMPONENT"
-            },
             "6814bc90-eecf-45bc-baa6-6da86b58e05f": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "6814bc90-eecf-45bc-baa6-6da86b58e05f",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1320,18 +1330,14 @@
                     "chartMarginRight": 0,
                     "chartMarginTop": 0,
                     "innerRadius": 30,
-                    "showLabel": true,
+                    "showLabel": false,
                     "showTooltip": true
                 },
                 "tab": "6c3cf8ca-caf1-4811-80a2-d0e9e099e933",
                 "type": "PIE_CHART_WIDGET_COMPONENT"
             },
             "6e968163-4971-44b5-a3e3-9bba4853a5c6": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "6e968163-4971-44b5-a3e3-9bba4853a5c6",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1353,11 +1359,7 @@
                 "type": "RADIAL_GAUGE_WIDGET_COMPONENT"
             },
             "aad673ef-1501-4860-a5ea-0f02a688b68c": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "aad673ef-1501-4860-a5ea-0f02a688b68c",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1441,11 +1443,7 @@
                 "type": "LINE_CHART_WIDGET_COMPONENT"
             },
             "brand": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "brand",
                 "props": {
                     "html": {
@@ -1468,12 +1466,32 @@
                 "tab": "HEADER",
                 "type": "HTML_WIDGET_COMPONENT"
             },
+            "c2696040-a979-475f-ac45-7466ee95187c": {
+                "externalScripts": [],
+                "id": "c2696040-a979-475f-ac45-7466ee95187c",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "7d3f2fee-8eaa-46c9-9139-e04a72cb9caf",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": "#commandResponse {\n    font-size:.8em;\n\n}",
+                                "HTML": "\u003cdiv id=\"commandResponse\"\u003e\n\u003c/div\u003e\n",
+                                "JavaScript": "//JavaScript\ntry {\n    ds=this.datasource;\n    $(\"#commandResponse\")[0].innerHTML=\"\u003cpre\u003e\" + ds + \"\u003c/pre\u003e\";\n}\ncatch(ex){}"
+                            }
+                        }
+                    }
+                },
+                "tab": "6f4487ec-5862-4e70-ba68-835e39d9e557",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
             "d4d90bb5-f099-4189-ac28-7b1d5f49c516": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "d4d90bb5-f099-4189-ac28-7b1d5f49c516",
                 "props": {
                     "HAS_UNIQUE_STYLE": false,
@@ -1556,11 +1574,7 @@
                 "type": "LINE_CHART_WIDGET_COMPONENT"
             },
             "db000667-9691-49c2-b3f8-8d62e905a541": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "db000667-9691-49c2-b3f8-8d62e905a541",
                 "props": {
                     "HAS_UNIQUE_STYLE": false,
@@ -1568,12 +1582,12 @@
                     "activeItemBackgroundColor": "#00a60c",
                     "activeItemFontColor": "#ffffff",
                     "activeStatusBulletColor": "#00a60c",
-                    "activeStatusImageIcon": "",
-                    "allowFilters": true,
+                    "activeStatusImageIcon": "http://downloadicons.net/sites/default/files/Up-circus-Icon-258065.png",
+                    "allowFilters": false,
                     "allowSearch": true,
                     "bulletColor": "#000000",
                     "displayAttribute": "displayname",
-                    "displayBullets": true,
+                    "displayBullets": false,
                     "displayStatusIndicators": true,
                     "enableListAutoSelect": true,
                     "eventTarget": {
@@ -1584,12 +1598,12 @@
                         "id": "1e1d1557-bc4f-4923-9c3e-641909f6383e",
                         "outgoing_parser": {
                             "isDebugOn": false,
-                            "value": "//Set the DS to be the defined edge\ns=datasources[\"edgeMetrics\"].settings();\ns.EDGE_NAME=this.widget.name;\ndatasources[\"edgeMetrics\"].settings(s);\ndatasources[\"edgeMetrics\"].refresh();\n\nclearInterval(window.intervalId);\nwindow.intervalId = setInterval(\n  () =\u003e\n  datasources[\"edgeMetrics\"].refresh(), 5*60*1000); //Refresh every 5 mins\nreturn this.widget;"
+                            "value": "//Set the DS to be the defined edge\ns=datasources[\"edgeMetrics\"].settings();\ns.EDGE_NAME=this.widget.name;\ndatasources[\"edgeMetrics\"].settings(s);\ndatasources[\"edgeMetrics\"].refresh();\n\nclearInterval(window.intervalId);\nwindow.intervalId = setInterval(\n  () =\u003e\n  datasources[\"edgeMetrics\"].refresh(), 5*60*1000); //Refresh every 5 mins\ntry {\n$(\"#commandResponse\")[0].innerHTML=\"\u003cpre\u003e\u003c/pre\u003e\";\n}\ncatch(ex){}\nreturn this.widget;"
                         }
                     },
                     "fontColor": "#000000",
                     "inactiveStatusBulletColor": "#980701",
-                    "inactiveStatusImageIcon": "",
+                    "inactiveStatusImageIcon": "http://downloadicons.net/sites/default/files/Down-circus-Icon-449255.png",
                     "listItemBackgroundColor": "#ffffff",
                     "listSource": {
                         "dataType": "DYNAMIC_DATA_TYPE",
@@ -1600,7 +1614,7 @@
                         "id": "6e1d6035-4eb6-41d2-904d-6f24059be2ec",
                         "incoming_parser": {
                             "isDebugOn": false,
-                            "value": "var li=[];\nthis.datasource.forEach(function (i) {\n  i.displayname=i.name + \" : \" + i.last_seen_version;\n})\nreturn this.datasource;"
+                            "value": "var li=[];\nthis.datasource.forEach(function (i) {\n  i.displayname=i.name + \" : \" + i.last_seen_version;\n})\n\nthis.datasource.sort(function(a, b){\n    if(a.name \u003c b.name) { return -1; }\n    if(a.name \u003e b.name) { return 1; }\n    return 0;\n})\n\nreturn this.datasource;\n"
                         }
                     },
                     "listTitle": "",
@@ -1611,12 +1625,32 @@
                 "tab": "b339aca5-7886-488a-ab3a-fbdd9e40a2d3",
                 "type": "FILTERABLE_LIST_WIDGET_COMPONENT"
             },
+            "efacbe4c-5de7-41a8-b188-b40965976d90": {
+                "externalScripts": [],
+                "id": "efacbe4c-5de7-41a8-b188-b40965976d90",
+                "props": {
+                    "html": {
+                        "dataType": "DYNAMIC_DATA_TYPE",
+                        "force_data": [
+                            "STATIC_DATA_TYPE",
+                            "DYNAMIC_DATA_TYPE"
+                        ],
+                        "id": "1e1d1557-bc4f-4923-9c3e-641909f6383e",
+                        "incoming_parser": {
+                            "isDebugOn": false,
+                            "value": {
+                                "CSS": ".btn-group-vertical .btn {\n    margin-bottom:10px;\n}",
+                                "HTML": "\u003cdiv id=\"edgeName\" style=\"margin-bottom:20px\" class=\"bg-light rounded\"\u003e\u003c/div\u003e\n\u003cdiv class=\"btn-group-vertical\" style=\"width:100%; align='middle'\" id=\"edgeCommands\" role=\"group\" aria-label=\"Vertical button group\"\u003e\n\u003c/div\u003e",
+                                "JavaScript": "//JavaScript\ndebugger;\nif (datasources.selectedEdge.latestData().name)\n    $(\"#edgeName\")[0].innerHTML=\"Edge Name: \u003cb\u003e\" + datasources.selectedEdge.latestData().name + \"\u003c/b\u003e\";\ntargetDiv=\"#edgeCommands\";\n$(targetDiv)[0].innerHTML=\"\";\nds=[];\ndebugger;\nif (!(typeof datasources.edgeCommandsList.latestData()===\"undefined\"))\n    ds=datasources.edgeCommandsList.latestData().results.DATA;\nfor (var i=0; i\u003cds.length; i++) {\n    var el = document.createElement(\"button\");\n    el.command = ds[i].command;\n    el.innerHTML=ds[i].name;\n    el.className=ds[i].style;\n    el.onclick=runCommand;\n    $(targetDiv)[0].appendChild(el);\n}\n\nfunction runCommand() {\n    topic=\"system/command/_edge/\" + datasources.selectedEdge.latestData().name\n    datasources.edgeCommand.settings({\"TOPIC_NAME\":topic})\n    topic=\"edge/command/\" + datasources.selectedEdge.latestData().name + \"/_platform\"\n    datasources.edgeResponse.settings({\"TOPIC_NAME\":topic})\n    console.log(datasources.edgeCommand.settings());\n    cmd={\"command\": this.command};\n    datasources.edgeCommand.sendData(JSON.stringify(cmd));\n\n}\n\n\n"
+                            }
+                        }
+                    }
+                },
+                "tab": "6f4487ec-5862-4e70-ba68-835e39d9e557",
+                "type": "HTML_WIDGET_COMPONENT"
+            },
             "flyoutTitle": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "flyoutTitle",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1631,11 +1665,7 @@
                 "type": "TEXT_WIDGET_COMPONENT"
             },
             "title": {
-                "externalScripts": [
-                    "//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/xterm.js",
-                    "https://cdnjs.cloudflare.com/ajax/libs/xterm/3.9.1/addons/fit/fit.min.js"
-                ],
+                "externalScripts": [],
                 "id": "title",
                 "props": {
                     "HAS_UNIQUE_STYLE": true,
@@ -1654,7 +1684,7 @@
         }
     },
     "description": "",
-    "last_updated": "03 Jan 19 12:29 UTC",
+    "last_updated": "21 Jan 19 19:34 UTC",
     "name": "Edge Monitor Portal",
     "system_key": "c8c4c0c10bb0f8a6a0eaeff0b08901",
     "type": "custom_v2"

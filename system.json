@@ -5,6 +5,13 @@
             "assets": [
                 {
                     "asset_class": "adaptors",
+                    "asset_id": "edgeCommander",
+                    "deployment": "defaultDeployment",
+                    "member": "defaultDeployment_deployment_edge_group",
+                    "sync": true
+                },
+                {
+                    "asset_class": "devices",
                     "asset_id": "",
                     "deployment": "defaultDeployment",
                     "member": "defaultDeployment_deployment_edge_group",
@@ -13,7 +20,7 @@
             ],
             "description": "",
             "edges": [
-                "edge1"
+                "___ALL_EDGES___"
             ],
             "name": "defaultDeployment"
         },
@@ -28,16 +35,14 @@
                 }
             ],
             "description": "TTY Daemon for Edge Management",
-            "edges": [
-                "debian"
-            ],
+            "edges": [],
             "name": "ttyd"
         }
     ],
     "description": "",
-    "messaging_url": "platform.clearblade.com:1883",
+    "messaging_url": "presales.clearblade.com:1883",
     "name": "ClearBlade Edge Monitor",
     "platform_url": "https://presales.clearblade.com",
     "system_key": "c8c4c0c10bb0f8a6a0eaeff0b08901",
-    "system_secret": ""
+    "system_secret": "C8C4C0C10B80AC83FEDF9FD6A274"
 }

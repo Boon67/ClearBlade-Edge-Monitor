@@ -1,0 +1,17 @@
+#Variables
+ADAPTERSERVICENAME=edgecommander.clearblade.service
+SYSTEMDPATH=/lib/systemd/system
+LOGLEVEL=DEBUG
+PYTHONFILE=mqttcommand.py
+PYTHONBIN=/usr/bin/python
+PARAMS='--systemKey=c8c4c0c10bb0f8a6a0eaeff0b08901 --systemSecret=C8C4C0C10B80AC83FEDF9FD6A274 --deviceID="edgeCommand" --activeKey="gpWKk61QBO6xMJ552Cv03Y7381J" --httpUrl=http://localhost:9000 --requestTopicRoot="system/command/_edge/edge1" --responseTopicRoot="edge/command/edge1/_platform"'
+
+SYSTEMKEY='c8c4c0c10bb0f8a6a0eaeff0b08901'
+SYSTEMSECRET='C8C4C0C10B80AC83FEDF9FD6A274'
+COMMANDTOPIC='system/command/_edge/edge1'
+DEVICEID='edgeCommand'
+ACTIVEKEY='gpWKk61QBO6xMJ552Cv03Y7381J'
+HTTPURL='http://localhost:9000' #For Communicating Directly to the Edge (Note Port number)
+#HTTPURL='https://platform.clearblade.com #For Platform Connections
+REQUESTTOPICROOT='system/command/_edge/edge1'
+RESPONSETOPICROOT='edge/command/edge1/_platform'
